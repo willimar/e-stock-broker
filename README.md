@@ -2,7 +2,7 @@
 
 Este repositório tem por finalidade gerar uma imagem docker para trabalhar como um brocker. Foi optado o uso do RabitMQ, para essa função, mas acredito que futuramente possa ser adicionado o Kafika.
 
-## docker-compose.yml
+### docker-compose.yml
 
 Arquivo para subir um container. Foram usadas variaveis de ambiente para informar a senha e usuário da UI do RabbitMQ.
 Necessária atenção para as variáveis de ambiente:
@@ -22,7 +22,7 @@ Comandos uteis:
     docker-compose down -v
 ```
 
-## rabbit-mq-plugins.dockerfile
+### rabbit-mq-plugins.dockerfile
 
 Arquivo para gerar a imagem docker. 
 
@@ -33,6 +33,6 @@ Para compilar a nova imagem foram usados os plugins:
 
 Atenção para o arquivo rabbitmq.conf. Ele informa usuário e senha e estes valores devem ser modificados antes de compilar a imagem.
 
-## rabbitmq.conf
+### rabbitmq.conf
 
 Arquivo de configuração do RabbitMQ. Deve ser modificado antes de se compilar para colocar valores mais seguros.
