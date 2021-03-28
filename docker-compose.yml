@@ -1,27 +1,27 @@
 version: '3'
 
 services:
-
-  rabbitmq:    
+  e-stock-broker:    
     build:
       context: .
       dockerfile: rabbit-mq-plugins.dockerfile
+    image: e-stock-brocker:1.0.3.0
     ports:
-    - "15672:15672"  #Management
-    - "5672:5672"    #AMQP
-    - "25672:25672"  #clustering
-    
-    - "1883:1883"    #mqtt
-    - "15675:15675"  #http/web-mqtt
+      - "15672:15672"  #Management
+      - "5672:5672"    #AMQP
+      - "25672:25672"  #clustering
+      
+      - "1883:1883"    #mqtt
+      - "15675:15675"  #http/web-mqtt
 
-    - "61613:61613"  #stomp
-    - "15674:15674"  #http/web-stomp
+      - "61613:61613"  #stomp
+      - "15674:15674"  #http/web-stomp
     environment:
-      RABBITMQ_DEFAULT_USER: usuario
+      RABBITMQ_DEFAULT_USER: Admin
       RABBITMQ_DEFAULT_PASS: senha
-      RABBITMQ_DEFAULT_VHOST: vhost
+      RABBITMQ_DEFAULT_VHOST: e-stock-brocker
     volumes:
-      - mq_data:/var/lib/rabbitmq/mnesia
-
+      - e-stock-broker:/var/lib/rabbitmq/mnesia
+    container_name: e-stock-broker
 volumes:
-  mq_data:
+  e-stock-broker:
