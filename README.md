@@ -2,7 +2,7 @@
 
 Este repositório tem por finalidade gerar uma imagem docker para trabalhar como um brocker. Foi optado o uso do RabitMQ, para essa função, mas acredito que futuramente possa ser adicionado o Kafika.
 
-### docker-compose.yml
+## docker-compose.yml
 
 Arquivo para subir um container. Foram usadas variaveis de ambiente para informar a senha e usuário da UI do RabbitMQ.
 Necessária atenção para as variáveis de ambiente:
@@ -13,6 +13,15 @@ Necessária atenção para as variáveis de ambiente:
 O nome do container é informado hardcode ``` container_name: e-stock-broker ``` logo é importante excluir o container anterior antes de criar um novo.
 Caso esteja usando um Kubernets, esta linha deverá ser excluída.
 
-### rabbitmq.conf
+Comandos uteis:
+```
+    # Para executar o container
+    docker-compose up --build
+    
+    # Para desfazer as modificações do up
+    docker-compose down -v
+```
 
-### rabbit-mq-plugins.dockerfile
+## rabbit-mq-plugins.dockerfile
+
+## rabbitmq.conf
