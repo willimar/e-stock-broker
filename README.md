@@ -24,4 +24,15 @@ Comandos uteis:
 
 ## rabbit-mq-plugins.dockerfile
 
+Arquivo para gerar a imagem docker. 
+
+Para compilar a nova imagem foram usados os plugins:
+* rabbitmq_management
+* rabbitmq_mqtt rabbitmq_web_mqtt
+* rabbitmq_stomp rabbitmq_web_stomp
+
+Atenção para o arquivo rabbitmq.conf. Ele informa usuário e senha e estes valores devem ser modificados antes de compilar a imagem.
+
 ## rabbitmq.conf
+
+Arquivo de configuração do RabbitMQ. Deve ser modificado antes de se compilar para colocar valores mais seguros.
