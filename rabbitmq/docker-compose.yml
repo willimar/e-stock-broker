@@ -17,9 +17,9 @@ services:
       - "61613:61613"  #stomp
       - "15674:15674"  #http/web-stomp
     environment:
-      RABBITMQ_DEFAULT_USER: Admin
-      RABBITMQ_DEFAULT_PASS: senha
-      RABBITMQ_DEFAULT_VHOST: e-stock-brocker
+      RABBITMQ_DEFAULT_USER: ${ADMIN_USER}
+      RABBITMQ_DEFAULT_PASS: ${ADMIN_PASSWORD}
+      RABBITMQ_DEFAULT_VHOST: ${RABBITMQ_VHOST}
     volumes:
       - e-stock-broker:/var/lib/rabbitmq/mnesia
     container_name: e-stock-broker
