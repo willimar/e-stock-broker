@@ -7,6 +7,11 @@ Após a execução acesse o endereço http://localhost:15672 e vualá, seu Rabbi
 
 Comando a ser executado: ```e-mail-setup.sh [UserName] [Password] [VirtualHost]```
 
+Resultado após instalação
+![image](https://user-images.githubusercontent.com/19449931/112773327-0c948780-900c-11eb-8666-45d884a6c9e2.png)
+
+![image](https://user-images.githubusercontent.com/19449931/112773402-54b3aa00-900c-11eb-83c2-a6fae34db999.png)
+
 ### docker-compose.yml
 
 Arquivo para subir um container. Foram usadas variaveis de ambiente para informar a senha e usuário da UI do RabbitMQ.
