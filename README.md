@@ -1,6 +1,11 @@
 # e-stock-broker
 
-Este repositório tem por finalidade gerar uma imagem docker para trabalhar como um brocker. Foi optado o uso do RabitMQ, para essa função, mas acredito que futuramente possa ser adicionado o Kafika.
+Este repositório tem por finalidade gerar uma imagem docker para trabalhar como um broker. Foi optado o uso do RabitMQ, para essa função, mas acredito que futuramente possa ser adicionado o Kafika.
+
+Para facilitar a criação da imagem, escrevi o arquivo ```e-mail-setup.sh```. Basta executá-lo que a imagem será criada. 
+Após a execução acesse o endereço http://localhost:15672 e vualá, seu RabbitMQ estará no ar.
+
+Comando a ser executado: ```e-mail-setup.sh [UserName] [Password] [VirtualHost]```
 
 ### docker-compose.yml
 
